@@ -71,7 +71,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```inkscape.exe
+```
+inkscape.exe
 ```
 
 Detection method: File or folder exists

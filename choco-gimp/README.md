@@ -71,7 +71,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```unins000.exe
+```
+unins000.exe
 ```
 
 Detection method: File or folder exists

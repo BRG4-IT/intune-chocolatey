@@ -68,7 +68,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```firefox.exe
+```
+firefox.exe
 ```
 
 Detection method: File or folder exists

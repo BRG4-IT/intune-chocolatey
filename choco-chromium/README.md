@@ -71,7 +71,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```chrome.exe
+```
+chrome.exe
 ```
 
 Detection method: File or folder exists

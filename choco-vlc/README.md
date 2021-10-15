@@ -75,7 +75,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```vlc.exe
+```
+vlc.exe
 ```
 
 Detection method: File or folder exists

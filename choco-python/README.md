@@ -72,7 +72,8 @@ Path/Pfad:
 
 File or Folder/Datei oder Ordner: 
 
-```py.exe
+```
+py.exe
 ```
 
 Detection method: File or folder exists
