@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-LibreOffice</textarea>
+```
+LibreOffice
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-LibreOffice is a free and open-source office productivity software suite. The LibreOffice suite consists of programs for word processing, creating and editing of spreadsheets, slideshows, diagrams and drawings, working with databases, and composing mathematical formulae.</textarea>
+```
+LibreOffice is a free and open-source office productivity software suite. The LibreOffice suite consists of programs for word processing, creating and editing of spreadsheets, slideshows, diagrams and drawings, working with databases, and composing mathematical formulae.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-The Document Foundation</textarea>
+```
+The Document Foundation
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://de.libreoffice.org/</textarea>
+```
+https://de.libreoffice.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://de.libreoffice.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,14 +64,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES%\LibreOffice\program\</textarea>
+```
+%PROGRAMFILES%\LibreOffice\program\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-swriter.exe</textarea>
+```
+swriter.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-libreoffice.ps1</textarea>
+[detect-libreoffice.ps1](./detect-libreoffice.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-libreoffice-outdated.ps1</textarea>
+[detect-libreoffice-outdated.ps1](./detect-libreoffice-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

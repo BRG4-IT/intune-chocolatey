@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-VLC Media Player</textarea>
+```
+VLC Media Player
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.</textarea>
+```
+VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-VideoLAN</textarea>
+```
+VideoLAN
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.videolan.org/</textarea>
+```
+https://www.videolan.org/
+```
 
 ### Icon:
 
@@ -43,13 +48,15 @@ https://www.videolan.org/</textarea>
 
 
 ### Install:
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc"
+```
 
 
 ### Uninstall:
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc" -Uninstall
+```
 
 
 
@@ -61,13 +68,15 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES%\VideoLAN\VLC\</textarea>
+```
+%PROGRAMFILES%\VideoLAN\VLC\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">vlc.exe</textarea>
+```vlc.exe
+```
 
 Detection method: File or folder exists
 
@@ -80,13 +89,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-vlc.ps1</textarea>
+[detect-vlc.ps1](./detect-vlc.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-vlc-outdated.ps1</textarea>
+[detect-vlc-outdated.ps1](./detect-vlc-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

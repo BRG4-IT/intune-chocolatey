@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Chromium Webbrowser</textarea>
+```
+Chromium Webbrowser
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Chromium is a free and open-source codebase for a web browser, principally developed and maintained by Google. Google uses the code to make its Chrome web browser, which has additional features.</textarea>
+```
+Chromium is a free and open-source codebase for a web browser, principally developed and maintained by Google. Google uses the code to make its Chrome web browser, which has additional features.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Google</textarea>
+```
+Google
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.chromium.org/</textarea>
+```
+https://www.chromium.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://www.chromium.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "chromium"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "chromium"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "chromium" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "chromium" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,13 +64,15 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%ProgramW6432%\Chromium\Application\</textarea>
+```
+%ProgramW6432%\Chromium\Application\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">chrome.exe</textarea>
+```chrome.exe
+```
 
 Detection method: File or folder exists
 
@@ -76,13 +85,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-chromium.ps1</textarea>
+[detect-chromium.ps1](./detect-chromium.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-chromium-outdated.ps1</textarea>
+[detect-chromium-outdated.ps1](./detect-chromium-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

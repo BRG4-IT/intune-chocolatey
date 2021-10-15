@@ -6,31 +6,36 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Python</textarea>
+```
+Python
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
+```
 Python is a programming language that lets you work more quickly and integrate your systems more effectively.
-</textarea>
+
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Python Software Foundation</textarea>
+```
+Python Software Foundation
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.python.org/</textarea>
+```
+https://www.python.org/
+```
 
 ### Icon: 
 
@@ -40,14 +45,16 @@ https://www.python.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -58,13 +65,15 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%SystemRoot%\</textarea>
+```
+%SystemRoot%\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">py.exe</textarea>
+```py.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-python.ps1</textarea>
+[detect-python.ps1](./detect-python.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-python-outdated.ps1</textarea>
+[detect-python-outdated.ps1](./detect-python-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

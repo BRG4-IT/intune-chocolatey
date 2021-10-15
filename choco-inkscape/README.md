@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Inkscape</textarea>
+```
+Inkscape
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Inkscape is a free and open-source vector graphics editor used to create vector images, primarily in Scalable Vector Graphics (SVG) format. Other formats can be imported and exported.</textarea>
+```
+Inkscape is a free and open-source vector graphics editor used to create vector images, primarily in Scalable Vector Graphics (SVG) format. Other formats can be imported and exported.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Inkscape Community</textarea>
+```
+Inkscape Community
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://inkscape.org/</textarea>
+```
+https://inkscape.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://inkscape.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,13 +64,15 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES%\Inkscape\bin\</textarea>
+```
+%PROGRAMFILES%\Inkscape\bin\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">inkscape.exe</textarea>
+```inkscape.exe
+```
 
 Detection method: File or folder exists
 
@@ -76,13 +85,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-inkscape.ps1</textarea>
+[detect-inkscape.ps1](./detect-inkscape.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-inkscape-outdated.ps1</textarea>
+[detect-inkscape-outdated.ps1](./detect-inkscape-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

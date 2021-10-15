@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app" rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name" rows="1" cols="100">
-7-Zip</textarea>
+```
+7-Zip
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description" rows="5" cols="100">
-7-Zip is a free and open-source file archiver, a utility used to place groups of files within compressed containers known as "archives".</textarea>
+```
+7-Zip is a free and open-source file archiver, a utility used to place groups of files within compressed containers known as "archives".
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher" rows="1" cols="100">
-Igor Pavlov</textarea>
+```
+Igor Pavlov
+```
 
 
 ### Informations-URL:
 
-<textarea name="info" rows="1" cols="100">
-https://www.7-zip.org/</textarea>
+```
+https://www.7-zip.org/
+```
 
 ### Icon: 
 
@@ -39,13 +44,15 @@ https://www.7-zip.org/</textarea>
 
 
 ### Install:
-<textarea name="install" rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip"
+```
 
 
 ### Uninstall:
-<textarea name="uninstall" rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -56,14 +63,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath" rows="1" cols="100">
-%PROGRAMFILES%\7-zip\</textarea>
+```
+%PROGRAMFILES%\7-zip\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename" rows="1" cols="100">
-7z.exe</textarea>
+```
+7z.exe
+```
 
 Detection method: File or folder exists
 
@@ -76,13 +85,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript" rows="1" cols="100">
-detect-7zip.ps1</textarea>
+[detect-7zip.ps1](./detect-7zip.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2" rows="1" cols="100">
-detect-7zip-outdated.ps1</textarea>
+[detect-7zip-outdated.ps1](./detect-7zip-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

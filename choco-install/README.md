@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install.intunewin</textarea>
+```
+choco-install.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Chocolatey</textarea>
+```
+Chocolatey
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Chocolatey is a machine-level, command-line package manager and installer for Windows software. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.</textarea>
+```
+Chocolatey is a machine-level, command-line package manager and installer for Windows software. It uses the NuGet packaging infrastructure and Windows PowerShell to simplify the process of downloading and installing software.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Chocolatey Software, Inc.</textarea>
+```
+Chocolatey Software, Inc.
+```
 
 
 ### Informations-URL:
 
-<textarea name="info"  rows="1" cols="100">
-https://chocolatey.org/</textarea>
+```
+https://chocolatey.org/
+```
 
 ### Icon: 
 
@@ -39,12 +44,14 @@ https://chocolatey.org/</textarea>
 
 
 ### Install:
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install.ps1</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install.ps1
+```
 
 
 ### Uninstall:
-<textarea name="uninstall"  rows="1" cols="100">powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall</textarea>
+```powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -55,14 +62,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%ALLUSERSPROFILE%\chocolatey\</textarea>
+```
+%ALLUSERSPROFILE%\chocolatey\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-choco.exe</textarea>
+```
+choco.exe
+```
 
 Detection method: File or folder exists
 

@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Audacity</textarea>
+```
+Audacity
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Audacity is a free and open-source digital audio editor and recording application software, available for Windows, macOS, Linux, and other Unix-like operating systems.</textarea>
+```
+Audacity is a free and open-source digital audio editor and recording application software, available for Windows, macOS, Linux, and other Unix-like operating systems.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-The Audacity Team</textarea>
+```
+The Audacity Team
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.audacityteam.org/</textarea>
+```
+https://www.audacityteam.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://www.audacityteam.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "audacity"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "audacity"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "audacity" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "audacity" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,14 +64,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%ProgramW6432%\Audacity\</textarea>
+```
+%ProgramW6432%\Audacity\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-Audacity.exe</textarea>
+```
+Audacity.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-audacity.ps1</textarea>
+[detect-audacity.ps1](./detect-audacity.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-audacity-outdated.ps1</textarea>
+[detect-audacity-outdated.ps1](./detect-audacity-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

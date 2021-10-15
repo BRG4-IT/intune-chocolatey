@@ -6,31 +6,36 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-GIMP</textarea>
+```
+GIMP
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
+```
 GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. 
-</textarea>
+
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-GIMP Development Team</textarea>
+```
+GIMP Development Team
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.gimp.org/</textarea>
+```
+https://www.gimp.org/
+```
 
 ### Icon: 
 
@@ -40,13 +45,15 @@ https://www.gimp.org/</textarea>
 [https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/480px-The_GIMP_icon_-_gnome.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/480px-The_GIMP_icon_-_gnome.svg.png)
 
 ### Install:
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp"
+```
 
 
 ### Uninstall:
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,13 +64,15 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%ProgramW6432%\GIMP 2\uninst\</textarea>
+```
+%ProgramW6432%\GIMP 2\uninst\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">unins000.exe</textarea>
+```unins000.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-gimp.ps1</textarea>
+[detect-gimp.ps1](./detect-gimp.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-gimp-outdated.ps1</textarea>
+[detect-gimp-outdated.ps1](./detect-gimp-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

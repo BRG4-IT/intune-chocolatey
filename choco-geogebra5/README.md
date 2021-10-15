@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-GeoGebra 5</textarea>
+```
+GeoGebra 5
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-GeoGebra is an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics and science from primary school to university level.</textarea>
+```
+GeoGebra is an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics and science from primary school to university level.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Markus Hohenwarter</textarea>
+```
+Markus Hohenwarter
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://geogebra.org/</textarea>
+```
+https://geogebra.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://geogebra.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,14 +64,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES(X86)%\GeoGebra 5.0\</textarea>
+```
+%PROGRAMFILES(X86)%\GeoGebra 5.0\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-GeoGebra.exe</textarea>
+```
+GeoGebra.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-geogebra.ps1</textarea>
+[detect-geogebra.ps1](./detect-geogebra.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-geogebra-outdated.ps1</textarea>
+[detect-geogebra-outdated.ps1](./detect-geogebra-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

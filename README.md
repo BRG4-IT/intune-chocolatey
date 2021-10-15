@@ -12,12 +12,14 @@
 6. Execute the following commands:
 
 <textarea id="story" name="description"  rows="1" cols="100">
-.\IntuneWinAppUtil.exe -c .\choco-install -s choco-install.ps1 -o .\choco-install</textarea>
+.\IntuneWinAppUtil.exe -c .\choco-install -s choco-install.ps1 -o .\choco-install
+```
 
 and
 
 <textarea id="story" name="description"  rows="1" cols="100">
-.\IntuneWinAppUtil.exe -c .\choco-install-package -s choco-install-package.ps1 -o .\choco-install-package</textarea>
+.\IntuneWinAppUtil.exe -c .\choco-install-package -s choco-install-package.ps1 -o .\choco-install-package
+```
 
 
 ## Step 2: deploy chocolatey with intune

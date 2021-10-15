@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Firefox Webbrowser</textarea>
+```
+Firefox Webbrowser
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko rendering engine to display web pages, which implements current and anticipated web standards.</textarea>
+```
+Firefox is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko rendering engine to display web pages, which implements current and anticipated web standards.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Mozilla Corporation</textarea>
+```
+Mozilla Corporation
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.mozilla.org/de/firefox/</textarea>
+```
+https://www.mozilla.org/de/firefox/
+```
 
 ### Icon: 
 
@@ -38,13 +43,15 @@ https://www.mozilla.org/de/firefox/</textarea>
 [https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/462px-Firefox_logo%2C_2019.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/462px-Firefox_logo%2C_2019.svg.png)
 
 ### Install:
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox"
+```
 
 
 ### Uninstall:
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -55,12 +62,14 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES%\Mozilla Firefox\</textarea>
+```
+%PROGRAMFILES%\Mozilla Firefox\
+```
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">firefox.exe</textarea>
+```firefox.exe
+```
 
 Detection method: File or folder exists
 
@@ -73,13 +82,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-firefox.ps1</textarea>
+[detect-firefox.ps1](./detect-firefox.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-firefox-outdated.ps1</textarea>
+[detect-firefox-outdated.ps1](./detect-firefox-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

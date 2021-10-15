@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Adobe Acrobat Reader DC</textarea>
+```
+Adobe Acrobat Reader DC
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Adobe Acrobat is a family of application software and Web services developed by Adobe Inc. to view, create, manipulate, print and manage Portable Document Format (PDF) files.</textarea>
+```
+Adobe Acrobat is a family of application software and Web services developed by Adobe Inc. to view, create, manipulate, print and manage Portable Document Format (PDF) files.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Adobe Inc.</textarea>
+```
+Adobe Inc.
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://acrobat.adobe.com/</textarea>
+```
+https://acrobat.adobe.com/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://acrobat.adobe.com/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader" -Uninstall
+```
 
 ### Installationsverhalten: 
 
@@ -61,14 +68,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%PROGRAMFILES(X86)%\Adobe\Acrobat Reader DC\Reader\</textarea>
+```
+%PROGRAMFILES(X86)%\Adobe\Acrobat Reader DC\Reader\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-AcroRd32.exe</textarea>
+```
+AcroRd32.exe
+```
 
 Detection method: File or folder exists
 
@@ -81,13 +90,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-adobereader.ps1</textarea>
+[detect-adobereader.ps1](./detect-adobereader.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-adobereader-outdated.ps1</textarea>
+[detect-adobereader-outdated.ps1](./detect-adobereader-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

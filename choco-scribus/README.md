@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Scribus</textarea>
+```
+Scribus
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Scribus is free and open-source desktop publishing (DTP) software available for most desktop operating systems. It is designed for layout, typesetting, and preparation of files for professional-quality image-setting equipment. Scribus can also create animated and interactive PDF presentations and forms. Example uses include writing newspapers, brochures, newsletters, posters, and books.</textarea>
+```
+Scribus is free and open-source desktop publishing (DTP) software available for most desktop operating systems. It is designed for layout, typesetting, and preparation of files for professional-quality image-setting equipment. Scribus can also create animated and interactive PDF presentations and forms. Example uses include writing newspapers, brochures, newsletters, posters, and books.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Scribus Development Team</textarea>
+```
+Scribus Development Team
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.scribus.net/</textarea>
+```
+https://www.scribus.net/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://www.scribus.net/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "scribus"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "scribus"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "scribus" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "scribus" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,8 +64,9 @@ Rule type/Regel Typ: Registry Key/Registrirungschlüssel
 
 Key Path/Schlüsselpfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.sla</textarea>
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.sla
+```
 
 
 Detection method: key exists/Schlüssel vorhanden
@@ -72,13 +80,13 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-scribus.ps1</textarea>
+[detect-scribus.ps1](./detect-scribus.ps1
+)
+
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-scribus-outdated.ps1</textarea>
+[detect-scribus-outdated.ps1](./detect-scribus-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 

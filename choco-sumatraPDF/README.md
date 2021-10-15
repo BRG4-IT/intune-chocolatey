@@ -6,30 +6,35 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-<textarea name="app"  rows="1" cols="100">
-choco-install-package.intunewin</textarea>
+```
+choco-install-package.intunewin
+```
 
 
 ### Name:
 
-<textarea name="name"  rows="1" cols="100">
-Sumatra PDF</textarea>
+```
+Sumatra PDF
+```
 
 ### Description (Beschreibung):
 
-<textarea name="description"  rows="5" cols="100">
-Sumatra PDF is a free and open-source document viewer that supports many document formats including: Portable Document Format (PDF), Microsoft Compiled HTML Help (CHM), DjVu, EPUB, FictionBook (FB2), MOBI, PRC, Open XML Paper Specification (OpenXPS, OXPS, XPS), and Comic Book Archive file (CB7, CBR, CBT, CBZ). If Ghostscript is installed, it supports PostScript files.</textarea>
+```
+Sumatra PDF is a free and open-source document viewer that supports many document formats including: Portable Document Format (PDF), Microsoft Compiled HTML Help (CHM), DjVu, EPUB, FictionBook (FB2), MOBI, PRC, Open XML Paper Specification (OpenXPS, OXPS, XPS), and Comic Book Archive file (CB7, CBR, CBT, CBZ). If Ghostscript is installed, it supports PostScript files.
+```
 
 ### Publisher (Herausgeber)
 
-<textarea name="publisher"  rows="1" cols="100">
-Krzysztof Kowalczyk</textarea>
+```
+Krzysztof Kowalczyk
+```
 
 
 ### Informations-URL:
 
-<textarea name="ifno"  rows="1" cols="100">
-https://www.sumatrapdfreader.org/</textarea>
+```
+https://www.sumatrapdfreader.org/
+```
 
 ### Icon: 
 
@@ -39,14 +44,16 @@ https://www.sumatrapdfreader.org/</textarea>
 
 ### Install:
 
-<textarea name="install"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install"</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install"
+```
 
 
 ### Uninstall:
 
-<textarea name="uninstall"  rows="1" cols="100">
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install" -Uninstall</textarea>
+```
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install" -Uninstall
+```
 
 
 ### Detection ruls (Erkennungsregeln):
@@ -57,14 +64,16 @@ Rule type/Regel Typ: File/Datei
 
 Path/Pfad:
 
-<textarea name="filepath"  rows="1" cols="100">
-%LOCALAPPDATA%\SumatraPDF\</textarea>
+```
+%LOCALAPPDATA%\SumatraPDF\
+```
 
 
 File or Folder/Datei oder Ordner: 
 
-<textarea name="filename"  rows="1" cols="100">
-SumatraPDF.exe</textarea>
+```
+SumatraPDF.exe
+```
 
 Detection method: File or folder exists
 
@@ -77,13 +86,11 @@ Script:
 
 for install only use:
 
-<textarea name="detectionscript"  rows="1" cols="100">
-detect-sumatrapdf.ps1</textarea>
+[detect-sumatrapdf.ps1](./detect-sumatrapdf.ps1)
 
 for install or upgrade outdated use:
 
-<textarea name="detectionscript2"  rows="1" cols="100">
-detect-sumatrapdf-outdated.ps1</textarea>
+[detect-sumatrapdf-outdated.ps1](./detect-sumatrapdf-outdated.ps1)
 
 ### Dependencies (Abhängigkeiten):
 
