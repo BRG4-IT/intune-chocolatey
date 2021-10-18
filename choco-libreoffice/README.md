@@ -38,7 +38,7 @@ https://de.libreoffice.org/
 
 ### Icon: 
 
-![libreoffice icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/LibreOffice_icon_3.3.1_48_px.svg/100px-LibreOffice_icon_3.3.1_48_px.svg.png)
+![LibreOffice icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/LibreOffice_icon_3.3.1_48_px.svg/100px-LibreOffice_icon_3.3.1_48_px.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/LibreOffice_icon_3.3.1_48_px.svg/400px-LibreOffice_icon_3.3.1_48_px.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/LibreOffice_icon_3.3.1_48_px.svg/400px-LibreOffice_icon_3.3.1_48_px.svg.png)
 

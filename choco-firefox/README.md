@@ -14,7 +14,7 @@ choco-install-package.intunewin
 ### Name:
 
 ```
-Firefox Webbrowser
+Firefox
 ```
 
 ### Description (Beschreibung):
@@ -38,7 +38,7 @@ https://www.mozilla.org/de/firefox/
 
 ### Icon: 
 
-![firefox icon](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/120px-Firefox_logo%2C_2019.svg.png)
+![Firefox icon](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/120px-Firefox_logo%2C_2019.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/462px-Firefox_logo%2C_2019.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/462px-Firefox_logo%2C_2019.svg.png)
 

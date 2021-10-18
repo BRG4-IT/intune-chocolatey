@@ -39,7 +39,7 @@ https://www.gimp.org/
 
 ### Icon: 
 
-![gimp icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/120px-The_GIMP_icon_-_gnome.svg.png)
+![GIMP icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/120px-The_GIMP_icon_-_gnome.svg.png)
 
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/480px-The_GIMP_icon_-_gnome.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/480px-The_GIMP_icon_-_gnome.svg.png)

@@ -38,7 +38,7 @@ https://www.scribus.net/
 
 ### Icon: 
 
-![Audacity icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Scribus_logo.svg/120px-Scribus_logo.svg.png)
+![Scribus icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Scribus_logo.svg/120px-Scribus_logo.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Scribus_logo.svg/480px-Scribus_logo.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Scribus_logo.svg/480px-Scribus_logo.svg.png)
 

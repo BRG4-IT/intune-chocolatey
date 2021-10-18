@@ -38,7 +38,7 @@ https://acrobat.adobe.com/
 
 ### Icon: 
 
-![Audacity icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/120px-Adobe_Acrobat_DC_logo_2020.svg.png)
+![Adobe Acrobat Reader icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/120px-Adobe_Acrobat_DC_logo_2020.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/480px-Adobe_Acrobat_DC_logo_2020.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/480px-Adobe_Acrobat_DC_logo_2020.svg.png)
 

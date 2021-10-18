@@ -38,7 +38,7 @@ https://inkscape.org/
 
 ### Icon: 
 
-![inkscape cion](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/120px-Inkscape_Logo.svg.png)
+![Inkscape cion](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/120px-Inkscape_Logo.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/480px-Inkscape_Logo.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/480px-Inkscape_Logo.svg.png)
 

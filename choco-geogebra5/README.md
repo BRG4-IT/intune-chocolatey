@@ -38,7 +38,7 @@ https://geogebra.org/
 
 ### Icon: 
 
-![chromium icon](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Geogebra.svg/120px-Geogebra.svg.png)
+![GeoGebra icon](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Geogebra.svg/120px-Geogebra.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Geogebra.svg/480px-Geogebra.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Geogebra.svg/480px-Geogebra.svg.png)
 

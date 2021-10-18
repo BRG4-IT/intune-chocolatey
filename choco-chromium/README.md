@@ -14,7 +14,7 @@ choco-install-package.intunewin
 ### Name:
 
 ```
-Chromium Webbrowser
+Chromium
 ```
 
 ### Description (Beschreibung):
@@ -38,7 +38,7 @@ https://www.chromium.org/
 
 ### Icon: 
 
-![chromium icon](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Chromium_Material_Icon.svg/120px-Chromium_Material_Icon.svg.png)
+![Chromium icon](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Chromium_Material_Icon.svg/120px-Chromium_Material_Icon.svg.png)
 
 [https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Chromium_Material_Icon.svg/480px-Chromium_Material_Icon.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Chromium_Material_Icon.svg/480px-Chromium_Material_Icon.svg.png)
 
