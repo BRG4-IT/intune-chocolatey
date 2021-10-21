@@ -22,10 +22,12 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
     choco install firefox -y --force
     choco install geogebra -y --force
     choco install gimp -y --force
+    choco install imageglass -y --force
     choco install inkscape -y --force
     choco install libreoffice-fresh -y --force
     choco install python -y --force
     choco install scribus -y --force
+    choco install sketchup -y --force
     choco install sumatrapdf.install -y --force
     choco install veracrypt -y --force
     choco install vlc -y --force
@@ -44,10 +46,12 @@ Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrati
     choco uninstall firefox -y
     choco uninstall geogebra -y
     choco uninstall gimp -y
+    choco uninstall imageglass -y
     choco uninstall inkscape -y
     choco uninstall libreoffice-fresh -y
     choco uninstall python -y
     choco uninstall scribus -y
+    choco uninstall sketchup -y
     choco uninstall sumatrapdf.uninstall -y
     choco uninstall veracrypt -y
     choco uninstall vlc -y
