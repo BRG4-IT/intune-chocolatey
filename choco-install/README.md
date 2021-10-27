@@ -6,7 +6,7 @@ __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-[../choco-install/choco-install.intunewin](../choco-install/choco-install.intunewin)
+[../choco-install/choco-install.intunewin](../choco-install/choco-install.intunewin?raw=true)
 
 
 ### Name:
