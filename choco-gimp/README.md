@@ -1,14 +1,12 @@
 ## GIMP (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -20,7 +18,7 @@ GIMP
 ### Description (Beschreibung):
 
 ```
-GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. 
+GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks.
 
 ```
 
@@ -37,7 +35,7 @@ GIMP Development Team
 https://www.gimp.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![GIMP icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/120px-The_GIMP_icon_-_gnome.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 unins000.exe

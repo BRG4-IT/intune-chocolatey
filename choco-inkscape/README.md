@@ -1,14 +1,12 @@
 ## Inkscape (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Inkscape Community
 https://inkscape.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![Inkscape cion](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/120px-Inkscape_Logo.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 inkscape.exe

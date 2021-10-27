@@ -1,14 +1,12 @@
 ## Audacity (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ The Audacity Team
 https://www.audacityteam.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![Audacity icon](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Audacity_Logo.svg/120px-Audacity_Logo.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 Audacity.exe

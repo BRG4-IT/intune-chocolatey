@@ -1,14 +1,12 @@
 ## Python (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -37,7 +35,7 @@ Python Software Foundation
 https://www.python.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![Python icon](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png)
 
@@ -70,7 +68,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 py.exe

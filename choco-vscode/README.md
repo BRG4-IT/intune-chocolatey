@@ -1,14 +1,12 @@
 ## Visual Studio Code (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -20,7 +18,7 @@ Visual Studio Code
 ### Description (Beschreibung):
 
 ```
-Visual Studio Code is an integrated development environment made by Microsoft for Windows, Linux and macOS.Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git. Users can change the theme, keyboard shortcuts, preferences, and install extensions that add additional functionality. 
+Visual Studio Code is an integrated development environment made by Microsoft for Windows, Linux and macOS.Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git. Users can change the theme, keyboard shortcuts, preferences, and install extensions that add additional functionality.
 
 ```
 
@@ -37,7 +35,7 @@ Microsoft
 https://code.visualstudio.com/
 ```
 
-### Icon: 
+### Icon:
 
 ![Visual Studio Code icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 Code.exe

@@ -1,14 +1,12 @@
 ## LibreOffice (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ The Document Foundation
 https://de.libreoffice.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![LibreOffice icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/LibreOffice_icon_3.3.1_48_px.svg/100px-LibreOffice_icon_3.3.1_48_px.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 swriter.exe

@@ -1,14 +1,12 @@
 ## Adobe Acrobat Reader DC (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Adobe Inc.
 https://acrobat.adobe.com/
 ```
 
-### Icon: 
+### Icon:
 
 ![Adobe Acrobat Reader icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/120px-Adobe_Acrobat_DC_logo_2020.svg.png)
 
@@ -55,7 +53,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adober
 powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader" -Uninstall
 ```
 
-### Installationsverhalten: 
+### Installationsverhalten:
 
 __System__
 
@@ -73,7 +71,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 AcroRd32.exe

@@ -1,14 +1,12 @@
-## Firefox Webbrowser (intune/chocolatey)
+## Firefox (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Mozilla Corporation
 https://www.mozilla.org/de/firefox/
 ```
 
-### Icon: 
+### Icon:
 
 ![Firefox icon](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/120px-Firefox_logo%2C_2019.svg.png)
 
@@ -66,7 +64,7 @@ Path/Pfad:
 %PROGRAMFILES%\Mozilla Firefox\
 ```
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 firefox.exe

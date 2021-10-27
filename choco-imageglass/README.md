@@ -1,14 +1,12 @@
 ## ImageGlass (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Dương Diệu Pháp
 https://imageglass.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![ImageGlass icon](https://raw.githubusercontent.com/d2phap/ImageGlass/prod/Assets/Logo/New/iglogo_128.png)
 
@@ -68,7 +66,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 ImageGlass.exe

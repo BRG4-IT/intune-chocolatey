@@ -1,14 +1,12 @@
 ## Chocolatey (intune)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install.intunewin
-```
+[..\choco-install\choco-install.intunewin](..\choco-install\choco-install.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Chocolatey Software, Inc.
 https://chocolatey.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![Chocolatey icon](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Chocolatey_icon.png/120px-Chocolatey_icon.png)
 
@@ -67,12 +65,10 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 choco.exe
 ```
 
 Detection method: File or folder exists
-
-

@@ -2,15 +2,13 @@
 
 Info: Scripted silent install fails if fast boot is enabled.
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -38,7 +36,7 @@ IDRIX
 http://www.veracrypt.fr/en/Home.html
 ```
 
-### Icon: 
+### Icon:
 
 ![VeraCrypt icon](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/VeraCrypt_Logo.svg/120px-VeraCrypt_Logo.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 %PROGRAMFILES%\VeraCrypt\
 ```
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 VeraCrypt.exe

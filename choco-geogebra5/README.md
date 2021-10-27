@@ -1,14 +1,12 @@
 ## GeoGebra 5 (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Markus Hohenwarter
 https://geogebra.org/
 ```
 
-### Icon: 
+### Icon:
 
 ![GeoGebra icon](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Geogebra.svg/120px-Geogebra.svg.png)
 
@@ -69,7 +67,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 GeoGebra.exe

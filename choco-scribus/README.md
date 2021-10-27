@@ -1,14 +1,12 @@
 ## Scribus (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -36,7 +34,7 @@ Scribus Development Team
 https://www.scribus.net/
 ```
 
-### Icon: 
+### Icon:
 
 ![Scribus icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Scribus_logo.svg/120px-Scribus_logo.svg.png)
 

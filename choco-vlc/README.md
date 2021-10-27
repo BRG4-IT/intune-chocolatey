@@ -1,14 +1,12 @@
 ## VLC Media Player (intune/chocolatey)
 
-### App-Typ: 
+### App-Typ:
 
 __Windows-App (Win32)__
 
 App-Paketdatei auswählen:
 
-```
-choco-install-package.intunewin
-```
+[..\choco-install-package\choco-install-package.intunewin](..\choco-install-package\choco-install-package.intunewin)
 
 
 ### Name:
@@ -73,7 +71,7 @@ Path/Pfad:
 ```
 
 
-File or Folder/Datei oder Ordner: 
+File or Folder/Datei oder Ordner:
 
 ```
 vlc.exe
@@ -99,8 +97,3 @@ for install or upgrade outdated use:
 ### Dependencies (Abhängigkeiten):
 
 chocolatey
-
-
-
-
-
