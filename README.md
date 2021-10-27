@@ -18,7 +18,6 @@
 and
 
 ```
-<textarea id="story" name="description"  rows="1" cols="100">
 .\IntuneWinAppUtil.exe -c .\choco-install-package -s choco-install-package.ps1 -o .\choco-install-package
 ```
 
