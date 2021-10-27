@@ -29,7 +29,7 @@ Please follow instructions found in:
 
 ## Convert scripts to .intunewin
 
-You will find all necessary `.intunewin` precompiled in [.\choco-install\choco-install.intunewin](.\choco-install\choco-install.intunewin) and [.\choco-install-package\choco-install-package.intunewin](.\choco-install-package\choco-install-package.intunewin). If you like you can compile the files on your own:
+You will find all necessary `.intunewin` precompiled in [./choco-install/choco-install.intunewin](./choco-install/choco-install.intunewin) and [./choco-install-package/choco-install-package.intunewin](./choco-install-package/choco-install-package.intunewin). If you like you can compile the files on your own:
 
 1. Clone/download this repository
 2. Download the [IntuneWinAppUtil](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) Programm
