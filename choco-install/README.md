@@ -48,7 +48,8 @@ powershell.exe -executionpolicy bypass .\choco-install.ps1
 
 
 ### Uninstall:
-```powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall
+```
+powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall
 ```
 
 
