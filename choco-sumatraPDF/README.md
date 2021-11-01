@@ -43,7 +43,7 @@ https://www.sumatrapdfreader.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install"
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatrapdf.install" -parameter "'/Path:C:\program files\Sumatrapdf'"
 ```
 
 
