@@ -55,7 +55,7 @@ else {
             choco install "$Name" -y
         }
         else {
-            choco install "$Name" -y --params "$Parameter"
+            choco install "$Name" -y --params="$Parameter"
         }
     }
 }
