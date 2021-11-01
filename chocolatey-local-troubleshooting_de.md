@@ -28,7 +28,7 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
     choco install python -y --force
     choco install scribus -y --force
     choco install sketchup -y --force
-    choco install sumatrapdf.install -y --force
+    choco install sumatrapdf.install -y --force --params='/Path:C:\program files\Sumatrapdf'
     choco install veracrypt -y --force
     choco install vlc -y --force
     choco install vscode -y --force

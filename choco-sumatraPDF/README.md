@@ -63,7 +63,7 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%LOCALAPPDATA%\SumatraPDF\
+C:\Program Files\SumatraPDF\
 ```
 
 
