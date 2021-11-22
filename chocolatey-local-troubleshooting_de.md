@@ -35,7 +35,7 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
 
 ## Deinstallation eine Paketes
 
-Manchmal "glaubt" chocolatey, dass eine misslungene Installation erfolgreich war. In diesem Fall zuerst ein Packet deinstallieren, dann neu installieren.
+Manchmal "glaubt" chocolatey, dass eine misslungene Installation erfolgreich war (zum Beispiel wenn die Paketdatei heruntergeladen wurde, aber während der Programminstallation der Computer heruntergefahren wird). In diesem Fall zuerst ein Packet deinstallieren, dann neu installieren.
 
 Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrativen Rechten_ öffnen  (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen), darin dann einen der folgenden Befehle absetzen:
 

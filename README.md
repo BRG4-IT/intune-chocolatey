@@ -51,4 +51,7 @@ and
 
 ## Client Troubleshooting
 
-Please follow instructions found in [./chocolatey-local-troubleshooting_de.md](./chocolatey-local-troubleshooting_de.md)
+Please follow instructions found in:
+
+- [Local Help with Intune Chocolatey Installations](./chocolatey-local-troubleshooting_en.md)
+- [Lokale Hilfe bei Intune Chocolatey Installationen](./chocolatey-local-troubleshooting_de.md)
