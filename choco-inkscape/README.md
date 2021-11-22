@@ -54,7 +54,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inksca
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -63,14 +63,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES%\Inkscape\bin\
+%ChocolateyInstall%\lib\inkscape\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-inkscape.exe
+inkscape.nupkg
 ```
 
 Detection method: File or folder exists

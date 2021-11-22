@@ -54,7 +54,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogeb
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -63,14 +63,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES(X86)%\GeoGebra 5.0\
+%ChocolateyInstall%\lib\geogebra\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-GeoGebra.exe
+geogebra.nupkg
 ```
 
 Detection method: File or folder exists

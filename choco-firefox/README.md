@@ -52,7 +52,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefo
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -61,13 +61,13 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES%\Mozilla Firefox\
+%ChocolateyInstall%\lib\firefox\
 ```
 
 File or Folder/Datei oder Ordner:
 
 ```
-firefox.exe
+firefox.nupkg
 ```
 
 Detection method: File or folder exists

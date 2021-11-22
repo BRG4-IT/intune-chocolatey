@@ -54,7 +54,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sumatr
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -63,14 +63,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-C:\Program Files\SumatraPDF\
+%ChocolateyInstall%\lib\sumatrapdf.install\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-SumatraPDF.exe
+sumatrapdf.install.nupkg
 ```
 
 Detection method: File or folder exists

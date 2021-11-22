@@ -53,7 +53,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sketch
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -62,14 +62,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES%\SketchUp\SketchUp 2017\
+%ChocolateyInstall%\lib\sketchup\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-SketchUp.exe
+sketchup.nupkg
 ```
 
 Detection method: File or folder exists

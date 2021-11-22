@@ -53,7 +53,7 @@ powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 

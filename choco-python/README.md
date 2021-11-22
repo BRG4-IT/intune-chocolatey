@@ -55,7 +55,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -64,14 +64,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%SystemRoot%\
+%ChocolateyInstall%\lib\python\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-py.exe
+python.nupkg
 ```
 
 Detection method: File or folder exists

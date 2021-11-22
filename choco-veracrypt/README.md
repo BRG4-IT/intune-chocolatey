@@ -55,7 +55,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "veracr
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -64,13 +64,13 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES%\VeraCrypt\
+%ChocolateyInstall%\lib\veracrypt\
 ```
 
 File or Folder/Datei oder Ordner:
 
 ```
-VeraCrypt.exe
+veracrypt.nupkg
 ```
 
 Detection method: File or folder exists

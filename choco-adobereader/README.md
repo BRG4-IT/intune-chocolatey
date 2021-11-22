@@ -58,7 +58,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adober
 __System__
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -67,14 +67,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES(X86)%\Adobe\Acrobat Reader DC\Reader\
+%ChocolateyInstall%\lib\adobereader\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-AcroRd32.exe
+adobereader.nupkg
 ```
 
 Detection method: File or folder exists

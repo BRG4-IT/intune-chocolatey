@@ -53,7 +53,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip" 
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -62,14 +62,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%PROGRAMFILES%\7-zip\
+%ChocolateyInstall%\lib\7zip\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-7z.exe
+7zip.nupkg
 ```
 
 Detection method: File or folder exists

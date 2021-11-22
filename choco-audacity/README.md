@@ -54,7 +54,7 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "audaci
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
@@ -63,14 +63,14 @@ Rule type/Regel Typ: File/Datei
 Path/Pfad:
 
 ```
-%ProgramW6432%\Audacity\
+%ChocolateyInstall%\lib\audacity\
 ```
 
 
 File or Folder/Datei oder Ordner:
 
 ```
-Audacity.exe
+audacity.nupkg
 ```
 
 Detection method: File or folder exists

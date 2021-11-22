@@ -54,20 +54,27 @@ powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "scribu
 ```
 
 
-### Detection ruls (Erkennungsregeln):
+### Detection rules (Erkennungsregeln):
 
 Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
 
 Rule type/Regel Typ: Registry Key/Registrirungschlüssel
 
-Key Path/Schlüsselpfad:
+
+Path/Pfad:
 
 ```
-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.sla
+%ChocolateyInstall%\lib\scribus\
 ```
 
 
-Detection method: key exists/Schlüssel vorhanden
+File or Folder/Datei oder Ordner:
+
+```
+scribus.nupkg
+```
+
+Detection method: File or folder exists
 
 
 OR/ODER (Warning: unsigned scripts prompt user!)
@@ -78,8 +85,7 @@ Script:
 
 for install only use:
 
-[detect-scribus.ps1](./detect-scribus.ps1
-)
+[detect-scribus.ps1](./detect-scribus.ps1)
 
 
 for install or upgrade outdated use:
