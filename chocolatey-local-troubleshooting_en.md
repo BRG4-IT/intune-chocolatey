@@ -25,6 +25,7 @@ To force a new installation of a package, first open a _Powershell Console with 
     choco install imageglass -y --force
     choco install inkscape -y --force
     choco install libreoffice-fresh -y --force
+    choco install musescore -y --force
     choco install python -y --force
     choco install scribus -y --force
     choco install sketchup -y --force
@@ -49,6 +50,7 @@ To uninstall a package, first open a _Powershell Console with administrative rig
     choco uninstall imageglass -y
     choco uninstall inkscape -y
     choco uninstall libreoffice-fresh -y
+    choco uninstall musescore -y
     choco uninstall python -y
     choco uninstall scribus -y
     choco uninstall sketchup -y

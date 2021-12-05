@@ -25,6 +25,7 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
     choco install imageglass -y --force
     choco install inkscape -y --force
     choco install libreoffice-fresh -y --force
+    choco install musescore -y --force
     choco install python -y --force
     choco install scribus -y --force
     choco install sketchup -y --force
@@ -32,6 +33,7 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
     choco install veracrypt -y --force
     choco install vlc -y --force
     choco install vscode -y --force
+    
 
 ## Deinstallation eine Paketes
 
@@ -49,6 +51,7 @@ Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrati
     choco uninstall imageglass -y
     choco uninstall inkscape -y
     choco uninstall libreoffice-fresh -y
+    choco uninstall musescore -y
     choco uninstall python -y
     choco uninstall scribus -y
     choco uninstall sketchup -y
