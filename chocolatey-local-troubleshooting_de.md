@@ -18,6 +18,7 @@ Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Conso
     choco install 7zip -y --force
     choco install adobereader -y --force
     choco install audacity -y --force
+    choco install blender -y --force
     choco install chromium -y --force
     choco install firefox -y --force
     choco install geogebra -y --force
@@ -44,6 +45,7 @@ Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrati
     choco uninstall 7zip -y
     choco uninstall adobereader -y
     choco uninstall audacity -y
+    choco uninstall blender -y
     choco uninstall chromium -y
     choco uninstall firefox -y
     choco uninstall geogebra -y

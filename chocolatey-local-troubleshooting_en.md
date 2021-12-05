@@ -18,6 +18,7 @@ To force a new installation of a package, first open a _Powershell Console with 
     choco install 7zip -y --force
     choco install adobereader -y --force
     choco install audacity -y --force
+    choco install blender -y --force
     choco install chromium -y --force
     choco install firefox -y --force
     choco install geogebra -y --force
@@ -43,6 +44,7 @@ To uninstall a package, first open a _Powershell Console with administrative rig
     choco uninstall 7zip -y
     choco uninstall adobereader -y
     choco uninstall audacity -y
+    choco uninstall blender -y
     choco uninstall chromium -y
     choco uninstall firefox -y
     choco uninstall geogebra -y
@@ -58,4 +60,3 @@ To uninstall a package, first open a _Powershell Console with administrative rig
     choco uninstall veracrypt -y
     choco uninstall vlc -y
     choco uninstall vscode -y
-
