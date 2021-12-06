@@ -1,46 +1,35 @@
 # Lokale Hilfe bei Intune Chocolatey Installationen
 
-## Logfile einsehen
+## Teste choco Befehl
 
-Alle Chocolatey Log-Dateien sind in folgendem Verzeichnis zu finden:
+Öffne ein Konsolenfenster (Tastenkombination `WIN+X` dann `Windows PowerShell` oder `Eingabeaufforderung` auswählen) und tippe den Befehl:
 
-    %ALLUSERSPROFILE%\chocolatey\logs
+    choco
 
-Alle Intune Management Extension Log-Dateien sind in folgendem Verzeichnis zu finden:
+Erhältst du eine Ausgabe der Art
 
-    %ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\Logs
+    Chocolatey v0.11.3
+    Please run 'choco -?' or 'choco <command> -?' for help menu.
+
+ist alles OK. Wenn nicht, musst der _chocolatey packet manager_ installiert werden.
 
 
-## Neuinstallation eine Paketes erzwingen
+## Chocolatey Paket Manager installieren
 
-Um eine Neuinstallation eines Pakets zu erzwingen, zuerst eine _Powershell Console mit Administrativen Rechten_ öffnen  (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen), darin dann einen der folgenden Befehle absetzen:
+Für die Installation eine _Powershell Konsole mit Administrativen Rechten_ öffnen  (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen). Um die Reste einer misslungene vorherige Installation zu löschen, den folgenden Befehl ausführen:
 
-    choco install 7zip -y --force
-    choco install adobereader -y --force
-    choco install audacity -y --force
-    choco install blender -y --force
-    choco install chromium -y --force
-    choco install firefox -y --force
-    choco install geogebra -y --force
-    choco install gimp -y --force
-    choco install imageglass -y --force
-    choco install inkscape -y --force
-    choco install libreoffice-fresh -y --force
-    choco install musescore -y --force
-    choco install python -y --force
-    choco install scribus -y --force
-    choco install sketchup -y --force
-    choco install sumatrapdf.install -y --force --params='/Path:C:\program files\Sumatrapdf'
-    choco install veracrypt -y --force
-    choco install vlc -y --force
-    choco install vscode -y --force
-    
+```
+Remove-Item "$env:ALLUSERSPROFILE\chocolatey" -Force -Recurse -ErrorAction SilentlyContinue
+```
 
-## Deinstallation eine Paketes
+Danach kopiere die Befehlszeile auf der Seite [https://chocolatey.org/install](https://chocolatey.org/install) in die administrative Powershell Konsole. Sind bei der Ausführung keine Fehler aufgetreten, teste erneut den `choco` Befehl. Nach einem Neustart des Computers sollten jetzt nach und nach die ausständigen Programminstallation über Intune erfolgen.
 
-Manchmal "glaubt" chocolatey, dass eine misslungene Installation erfolgreich war (zum Beispiel wenn die Paketdatei heruntergeladen wurde, aber während der Programminstallation der Computer heruntergefahren wird). In diesem Fall zuerst ein Packet deinstallieren, dann neu installieren.
 
-Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrativen Rechten_ öffnen  (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen), darin dann einen der folgenden Befehle absetzen:
+## Installation eines Chocolatey Paketes
+
+Ist nur die Intune-Installation eines einzelnen Chocolatey Programm-Pakets gescheitert, kann dieses über eine  _Powershell Konsole mit Administrativen Rechten_ öffnen (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen) installiert werden.
+
+Zuerst eine eventuell vorhande Version deinstallieren (entsprechende Befehlszeile kopieren):
 
     choco uninstall 7zip -y
     choco uninstall adobereader -y
@@ -61,3 +50,38 @@ Um ein Paket zu deinstallieren, zuerst eine _Powershell Console mit Administrati
     choco uninstall veracrypt -y
     choco uninstall vlc -y
     choco uninstall vscode -y
+
+Dann die Installation wiederholen (entsprechende Befehlszeile kopieren):
+
+    choco install 7zip -y
+    choco install adobereader -y
+    choco install audacity -y
+    choco install blender -y
+    choco install chromium -y
+    choco install firefox -y
+    choco install geogebra -y
+    choco install gimp -y
+    choco install imageglass -y
+    choco install inkscape -y
+    choco install libreoffice-fresh -y
+    choco install musescore -y
+    choco install python -y
+    choco install scribus -y
+    choco install sketchup -y
+    choco install sumatrapdf.install -y --params='/Path:C:\program files\Sumatrapdf'
+    choco install veracrypt -y
+    choco install vlc -y
+    choco install vscode -y
+    
+## Logfiles einsehen
+
+Für Analysezwecke kann es sinnvoll sein, vorerst die lokalen Logfiles einzusehen.
+
+Alle Chocolatey Logfiles sind in folgendem Verzeichnis zu finden:
+
+    %ALLUSERSPROFILE%\chocolatey\logs
+
+Alle Intune Management Extension Log-Dateien sind in folgendem Verzeichnis zu finden:
+
+    %ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\Logs
+
