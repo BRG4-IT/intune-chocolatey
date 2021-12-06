@@ -7,7 +7,7 @@ param (
 )
 
 if ($uninstall) {
-    Write-Host "uninstalling the chocolatey package manager"
+    # Write-Host "uninstalling the chocolatey package manager"
     ### taken from https://docs.chocolatey.org/en-us/choco/uninstallation
     $VerbosePreference = 'Continue'
     if (-not $env:ChocolateyInstall) {
@@ -101,6 +101,11 @@ if ($uninstall) {
     $userKey.Close()
 }
 else {
-    Write-Host "installing the chocolatey package manager"
+    # Write-Host "installing the chocolatey package manager"
+    $chocoDir = "$env:ALLUSERSPROFILE\chocolatey"
+    # cleaning up if old installation failed
+    If (Test-Path $chocoDir) {
+        Remove-Item $chocoDir -Force -Recurse -ErrorAction SilentlyContinue
+    }
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
