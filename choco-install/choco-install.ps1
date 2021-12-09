@@ -102,10 +102,23 @@ if ($uninstall) {
 }
 else {
     # Write-Host "installing the chocolatey package manager"
-    $chocoDir = "$env:ALLUSERSPROFILE\chocolatey"
-    # cleaning up if old installation failed
-    If (Test-Path $chocoDir) {
-        Remove-Item $chocoDir -Force -Recurse -ErrorAction SilentlyContinue
+
+    # never ever destroy an existing working chocolatey installation! 
+    try {
+        choco --version
     }
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    catch {
+        # if chocolatey detects a previous (even failed) installation, it
+        # refuses any new installation. Thus we first clean up any 
+        # remains of an old failed installation by deleting the chocolatey
+        # directory.
+    
+        $chocoDir = "$env:ALLUSERSPROFILE\chocolatey"
+        If (Test-Path $chocoDir) {
+            Remove-Item $chocoDir -Force -Recurse -ErrorAction SilentlyContinue
+        }
+    
+        # now install chocolatey (see from https://chocolatey.org/install)...
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    }
 }

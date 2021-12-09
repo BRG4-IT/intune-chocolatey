@@ -55,21 +55,10 @@ powershell.exe -executionpolicy bypass .\choco-install.ps1 -uninstall
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-choco.ps1](../choco-install/detect-choco.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ALLUSERSPROFILE%\chocolatey\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-choco.exe
-```
-
-Detection method: File or folder exists
+Enforce script signature check: __No__
