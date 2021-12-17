@@ -43,13 +43,13 @@ https://www.7-zip.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "7zip"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "7zip" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "7zip" -Uninstall
 ```
 
 

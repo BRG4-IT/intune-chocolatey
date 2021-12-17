@@ -43,14 +43,14 @@ https://de.libreoffice.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -Uninstall
 ```
 
 

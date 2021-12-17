@@ -43,13 +43,13 @@ https://imageglass.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "imageglass"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "imageglass"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "imageglass" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "imageglass" -Uninstall
 ```
 
 

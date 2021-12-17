@@ -43,13 +43,13 @@ https://www.blender.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "blender"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "blender" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender" -Uninstall
 ```
 
 

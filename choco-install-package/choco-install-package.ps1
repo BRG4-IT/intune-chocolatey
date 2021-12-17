@@ -4,25 +4,25 @@
     examples:
     
     # installing firefox with chocolatey
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox"
     
     # installing firefox with chocolatey tries to ensure a desktop icon for the program with the name "Firefox"
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -DesktopIcon "Firefox"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -DesktopIcon "Firefox"
 
     # install firefox with chocolatey and remove the Desktop Icon
     # (if provided by the package author the install parameter /NoDesktopShortcut is recommended.)
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -RemoveDesktopIcon
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -RemoveDesktopIcon
 
     # install firefox with chocolatey and remove the Desktop Icon named "LibreOffice 7.2"
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "libreoffice-fresh" -DesktopIcon "LibreOffice" -RemoveDesktopIcon
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -DesktopIcon "LibreOffice" -RemoveDesktopIcon
 
     # installing firefox with parameters (Note: valid parameters for a certain package can be looked up 
     # at the chocolatey community website for a certain (https://community.chocolatey.org/packages/) 
     # or command: choco info <packagename>)
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -Parameter "/NoDesktopShortcut /NoAutoUpdate"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Parameter "/NoDesktopShortcut /NoAutoUpdate"
     
     # uninstalling firefox with chocolatey
-    powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -Uninstall
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Uninstall
 #>
 
 param (

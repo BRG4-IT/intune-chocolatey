@@ -43,14 +43,14 @@ https://inkscape.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "inkscape" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape" -Uninstall
 ```
 
 

@@ -42,13 +42,13 @@ https://www.mozilla.org/de/firefox/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "firefox" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Uninstall
 ```
 
 

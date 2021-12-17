@@ -43,14 +43,14 @@ https://geogebra.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "geogebra" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -Uninstall
 ```
 
 

@@ -43,13 +43,13 @@ https://www.sketchup.com/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sketchup"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "sketchup"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "sketchup" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "sketchup" -Uninstall
 ```
 
 

@@ -44,13 +44,13 @@ https://code.visualstudio.com/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vscode"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "vscode"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vscode" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "vscode" -Uninstall
 ```
 
 

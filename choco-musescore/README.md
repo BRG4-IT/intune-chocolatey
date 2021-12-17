@@ -43,13 +43,13 @@ https://musescore.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "musescore"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "musescore"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "musescore" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "musescore" -Uninstall
 ```
 
 

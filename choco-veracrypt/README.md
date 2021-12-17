@@ -45,13 +45,13 @@ http://www.veracrypt.fr/en/Home.html
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "veracrypt"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "veracrypt"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "veracrypt" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "veracrypt" -Uninstall
 ```
 
 

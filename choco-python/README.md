@@ -44,14 +44,14 @@ https://www.python.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "python"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "python" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "python" -Uninstall
 ```
 
 

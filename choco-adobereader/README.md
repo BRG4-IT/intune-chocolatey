@@ -43,14 +43,14 @@ https://acrobat.adobe.com/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "adobereader"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "adobereader" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "adobereader" -Uninstall
 ```
 
 ### Installationsverhalten:

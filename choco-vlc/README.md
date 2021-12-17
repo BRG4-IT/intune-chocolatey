@@ -47,13 +47,13 @@ https://www.videolan.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "vlc"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "vlc" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "vlc" -Uninstall
 ```
 
 
