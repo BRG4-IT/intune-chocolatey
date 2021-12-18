@@ -39,7 +39,7 @@ param (
     [string]$DesktopIcon = '',
 
     [Parameter(Mandatory=$false)] # if set, removes all other desktop icons for the program
-    [switch]$DesktopIconUnique = $false
+    [switch]$DesktopIconUnique = $false,
 
     [Parameter(Mandatory=$false)] # if set, tries do remove desktop icon for the program
     [switch]$RemoveDesktopIcon = $false
