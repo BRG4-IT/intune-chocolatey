@@ -3,26 +3,37 @@
     
     examples:
     
-    # installing firefox with chocolatey
+    # installing firefox with chocolatey (for package name see https://community.chocolatey.org/packages)
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox"
     
-    # installing firefox with chocolatey tries to ensure a desktop icon for the program with the name "Firefox"
-    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -DesktopIcon "Firefox"
+    # installing firefox with parameters (Note: all valid parameters for a choco package can be listed by running
+    # choco info <packagename>
+    # on your locla computer)
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Parameter "/NoDesktopShortcut /NoAutoUpdate"
+    
+    # uninstalling firefox with chocolatey and removing all firefox desktop icons
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Uninstall
 
+    # installing choco package "geogebra" and adds a desktop icon for the program with the name "GeoGebra"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra"
+
+    # installing choco package "geogebra" and adds a desktop icon for the program with the name "GeoGebra 5.0"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra" -AppendVersion
+
+    # installing choco package "geogebra" andadds a desktop icon for the program with the name "GeoGebra GeoGebra 5.0.134.0"
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra" -AppendVersion -FullVersion
+
+    # uninstalling PuTTY with chocolatey and removing all custom "PuTTY" desktop icons 
+    # When using -DesktopIcon for creating custom icons, use this parameter also in the uninstall command!
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "putty.install" -DesktopIcon "PuTTY" -Uninstall
+    
     # install firefox with chocolatey and remove the Desktop Icon
     # (if provided by the package author the install parameter /NoDesktopShortcut is recommended.)
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -RemoveDesktopIcon
 
-    # install firefox with chocolatey and remove the Desktop Icon named "LibreOffice 7.2"
+    # install libreoffice with chocolatey and remove the Desktop Icon named "LibreOffice 7.2"
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -DesktopIcon "LibreOffice" -RemoveDesktopIcon
 
-    # installing firefox with parameters (Note: valid parameters for a certain package can be looked up 
-    # at the chocolatey community website for a certain (https://community.chocolatey.org/packages/) 
-    # or command: choco info <packagename>)
-    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Parameter "/NoDesktopShortcut /NoAutoUpdate"
-    
-    # uninstalling firefox with chocolatey
-    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Uninstall
 #>
 
 param (
@@ -42,7 +53,13 @@ param (
     [switch]$DesktopIconUnique = $false,
 
     [Parameter(Mandatory=$false)] # if set, tries do remove desktop icon for the program
-    [switch]$RemoveDesktopIcon = $false
+    [switch]$RemoveDesktopIcon = $false,
+
+    [Parameter(Mandatory=$false)] # if set, tries do remove desktop icon for the program
+    [switch]$AppendVersion = $false,
+
+    [Parameter(Mandatory=$false)] # if set, the full version number is used for desktop icon name in combination with the -AppendVersion switch
+    [switch]$FullVersion = $false
 )
 
 if (-not (Test-Path $env:ChocolateyInstall)) {
@@ -58,7 +75,7 @@ if ($Name.Length -eq 0) {
 ### Program installation/uninstallation
 
 if ($Uninstall) {
-    Write-Host "uninstall chocolatey package $Name..."
+    Write-Host "Uninstall chocolatey package $Name..."
     choco uninstall "$Name" -y
 }
 else {
@@ -68,11 +85,11 @@ else {
     $packageList = $InstalledPackages.Split([Environment]::NewLine)
     $found = $packageList | where {$_ -match "$Name *"}
     if (($found).Count -gt 0) {
-        Write-Host "uninstalling chocolatey package $Name..."
+        Write-Host "There seems to be a broken $Name choco installation. Uninstalling chocolatey package first..."
         choco uninstall "$Name" -y
     }
     
-    Write-Host "installing chocolatey package $Name..."
+    Write-Host "Installing chocolatey package $Name..."
     if ($Parameter.Length -eq 0) {
         choco install "$Name" -y
     }
@@ -99,15 +116,14 @@ if ($Uninstall -or $RemoveDesktopIcon) {
         $DesktopIcon = $Name
     }
     
-    Write-Host "removing desktop icons for $Name..."
-    Write-Host "looking for $DesktopIcon in $tagetPath"
+    Write-Host "Looking for $DesktopIcon icons in $tagetPath"
     Get-ChildItem -path "$tagetPath\*" -File -Include *.lnk -Force | Where-Object {($_.Name -like "$DesktopIcon.lnk") -or ($_.Name -match "^$DesktopIcon [0-9.]+.lnk$")} | Select Name,FullName | foreach {
-        write-host $_.FullName
+        Write-Host "Removing desktop icons for $Name ($($_.FullName))..."
         Remove-Item -Path $_.FullName -Force
     }
 }
 elseif ($DesktopIcon) {
-    Write-Host "Trying to create Desktop Link"
+    Write-Host "Trying to create a Desktop Link"
     $LNKfiles = ""
     # first try to find a LNK file in the start menu directories
     @(
@@ -143,7 +159,21 @@ elseif ($DesktopIcon) {
                 Remove-Item -Path $_.FullName
             }
         }
-        Write-Host "Creating Desktop Link"
-        Copy-Item -Path $LNKfile.FullName -Destination "$tagetPath\$DesktopIcon.lnk" -Force
+        $targetFullPath = "$tagetPath\$DesktopIcon.lnk"
+        if ($AppendVersion) {
+            $InstalledPackages = choco list --localonly
+            $packageInfo = $InstalledPackages.Split([Environment]::NewLine) | where {$_ -match "^$Name [0-9.]+$"} | Select -First 1
+            if ($packageInfo) {
+                $vnumbers = ($packageInfo -replace "$Name ","").Split(".")
+                if (!$FullVersion) {
+                    $vnumbers = $vnumbers[0..1]
+                }
+                $versionString = $vnumbers -join "."
+                Write-Host "found $Name version $versionString"
+                $targetFullPath = "$tagetPath\$DesktopIcon $versionString.lnk"
+            }            
+        }
+        Write-Host "Creating Desktop Link $targetFullPath"
+        Copy-Item -Path $LNKfile.FullName -Destination "$targetFullPath" -Force
     }
 }
