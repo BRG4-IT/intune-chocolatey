@@ -25,7 +25,7 @@ Remove-Item "$env:ALLUSERSPROFILE\chocolatey" -Force -Recurse -ErrorAction Silen
 Danach kopiere die Befehlszeile auf der Seite [https://chocolatey.org/install](https://chocolatey.org/install) in die administrative Powershell Konsole. Sind bei der Ausführung keine Fehler aufgetreten, teste erneut den `choco` Befehl. Nach einem Neustart des Computers sollten jetzt nach und nach die ausständigen Programminstallation über Intune erfolgen.
 
 
-## Installation eines Chocolatey Paketes
+## Installation/Deinstallation eines Chocolatey Paketes
 
 Ist nur die Intune-Installation/Deinstallation einzelner Chocolatey Programm-Pakets gescheitert, können diese über eine  _Powershell Konsole mit Administrativen Rechten_ öffnen (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen) am lokalen Computer installiert/deinstalliert werden.
 
