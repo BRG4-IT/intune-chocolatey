@@ -29,50 +29,15 @@ Then copy the command line found at [https://chocolatey.org/install](https://cho
 
 If only the Intune installation of a single Chocolatey program package failed, this can be installed via a _Powershell console with administrative rights_ open (key combination `WIN+X` then select __Windows PowerShell (Admin)__).
 
-First uninstall any existing version (copy the appropriate command line):
+To download the PowerShell file for installation/uninstallation from the Internet and save it in the folder `%ChocolateyInstall%\intune`, copy the following line, paste it into the console window and run it. 
 
-    choco uninstall 7zip -y
-    choco uninstall adobereader -y
-    choco uninstall audacity -y
-    choco uninstall blender -y
-    choco uninstall chromium -y
-    choco uninstall firefox -y
-    choco uninstall geogebra -y
-    choco uninstall gimp -y
-    choco uninstall imageglass -y
-    choco uninstall inkscape -y
-    choco uninstall libreoffice-fresh -y
-    choco uninstall musescore -y
-    choco uninstall python -y
-    choco uninstall scribus -y
-    choco uninstall sketchup -y
-    choco uninstall sumatrapdf.uninstall -y
-    choco uninstall veracrypt -y
-    choco uninstall vlc -y
-    choco uninstall vscode -y
+```
+$chocoIntunePath="$Env:ChocolateyInstall\intune";if (!(Test-Path $chocoIntunePath)) {New-Item -ItemType directory -Path $chocoIntunePath};cd $chocoIntunePath;wget "https://github.com/BRG4-IT/intune-chocolatey/blob/main/choco-install-package/choco-install-package.ps1?raw=true" -OutFile "choco-install-package.ps1"
+```
 
-Then repeat the installation (copy the corresponding command line):
-
-    choco install 7zip -y
-    choco install adobereader -y
-    choco install audacity -y
-    choco install blender -y
-    choco install chromium -y
-    choco install firefox -y
-    choco install geogebra -y
-    choco install gimp -y
-    choco install imageglass -y
-    choco install inkscape -y
-    choco install libreoffice-fresh -y
-    choco install musescore -y
-    choco install python -y
-    choco install scribus -y
-    choco install sketchup -y
-    choco install sumatrapdf.install -y --params='/Path:C:\program files\Sumatrapdf'
-    choco install veracrypt -y
-    choco install vlc -y
-    choco install vscode -y
+To install/uninstall individual programs, you can now use the command lines documented under the Install/Uninstall headings on the [README pages of the individual programs](https://github.com/BRG4-IT/intune-chocolatey#step-2-deploy-chocolatey-packages-with-intune).
     
+
 ## View log files
 
 For analysis purposes, it may be useful to view the local log files first.
