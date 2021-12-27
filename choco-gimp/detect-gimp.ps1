@@ -1,22 +1,56 @@
 # checking for a successful choco gimp installation
 
-$chocoPackageFilePath = "$env:ChocolateyInstall\lib\gimp\gimp.nupkg"
-If (-Not (Test-Path -Path "$chocoPackageFilePath")) {
-    Write-Output "choco $chocoPackageFilePath program package file not found"
+
+# checking for a successful choco LibreOffice installation
+
+
+### check chocolatey
+
+$packageName = "gimp"
+$installedPackages = $(choco list --localonly --idonly).Split([Environment]::NewLine)
+if ($packageName -notin $installedPackages) {
+    Write-Output "choco package $packageName not installed!"
     exit 1
 }
-
-$path = (Get-ChildItem "$env:ProgramW6432" -Directory | Sort | Where-Object {$_.Name -match "gimp*"} | Select -Last 1).FullName
-If ([string]::IsNullOrEmpty($path)) {
-    Write-Output "program path not found"
-    exit 1
+else {
+    Write-Output "choco package $packageName installed..."
 }
 
-$exefile = (Get-ChildItem "$path\bin" -File | Sort | Where-Object {$_.Name -match "gimp-\d+.\d+.exe"} | Select -Last 1).FullName
-If ([string]::IsNullOrEmpty($exefile)) {
-    Write-Output "program executeable not found"
+
+
+### check StartMenu entries
+
+$LNKfiles = ""
+@(
+    "$env:ProgramData\Microsoft\Windows\Start Menu\Programs",
+    "$env:AppData\Microsoft\Windows\Start Menu\Programs"
+) | foreach {
+    $startMenuLNKs = Get-ChildItem -path "$_\*" -recurse -Include *.lnk | Select Name,FullName | Sort Name -Descending # most recent program version on the top
+    if (!$LNKfiles) {
+        $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "GIMP *"}
+    }
+}
+if (!$LNKfiles) {
+    Write-Output "No shortcut file $shortcutName found in start menu folders!"
     exit 1
 }
+else {
+    Write-Output "Startmenu Shortcut $shortcutName found..."
+}
 
-Write-Output "gimp package and executable successfuly detected."
+
+### check existence of executable file found in StartMenu Shortcut
+
+$LNKfile = $LNKfiles | select -First 1
+$WScriptShell = New-Object -ComObject WScript.Shell
+$shortcutTarget = $WScriptShell.CreateShortcut($LNKfile.FullName).TargetPath
+if (-not (Test-Path $shortcutTarget)) {
+    Write-Host "Path $shortcutTarget is missing!"
+    exit 1
+}
+else {
+    Write-Output "Executable $shortcutTarget found..."
+}
+
+Write-Output "Everything seems fine."
 exit 0
