@@ -44,13 +44,13 @@ https://www.gimp.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "gimp"
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "gimp" -Uninstall
+powershell.exe -executionpolicy bypass .\choco-install-package.ps1 -Name "gimp" -Uninstall
 ```
 
 
