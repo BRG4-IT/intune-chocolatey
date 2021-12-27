@@ -43,52 +43,26 @@ https://de.libreoffice.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -DesktopIcon "LibreOffice" -RemoveDesktopIcon
 ```
-
+__Note: We remove the general LibreOffice X.X icon from the desktop, but add desktop icons for _Writer, Calc_ and _Impress._ See [https://github.com/BRG4-IT/StartMenu-to-Desktop](https://github.com/BRG4-IT/StartMenu-to-Desktop) for more information. If you want to keep the _LibreOffice_ icon, just remove the `-RemoveDesktopIcon` option from the command line above.__
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "libreoffice-fresh" -DesktopIcon "LibreOffice" -Uninstall
 ```
 
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-libreoffice.ps1](./detect-libreoffice.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\libreoffice-fresh\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-libreoffice-fresh.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-libreoffice.ps1](./detect-libreoffice.ps1)
-
-for install or upgrade outdated use:
-
-[detect-libreoffice-outdated.ps1](./detect-libreoffice-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
