@@ -43,53 +43,27 @@ https://inkscape.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape" -DesktopIcon "InkScape"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape" -DesktopIcon "InkScape" -Uninstall
 ```
-
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-inkscape.ps1](./detect-inkscape.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\inkscape\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-inkscape.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-inkscape.ps1](./detect-inkscape.ps1)
-
-for install or upgrade outdated use:
-
-[detect-inkscape-outdated.ps1](./detect-inkscape-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
 chocolatey
+
