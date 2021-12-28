@@ -6,11 +6,11 @@
 $packageName = "libreoffice-fresh"
 $installedPackages = $(choco list --localonly --idonly).Split([Environment]::NewLine)
 if ($packageName -notin $installedPackages) {
-    Write-Output "choco package $packageName not installed!"
+    Write-Output "choco package '$packageName' not installed!"
     exit 1
 }
 else {
-    Write-Output "choco package $packageName installed..."
+    Write-Output "choco package '$packageName' installed..."
 }
 
 
@@ -28,11 +28,11 @@ $LNKfiles = ""
     }
 }
 if (!$LNKfiles) {
-    Write-Output "No shortcut file $shortcutName found in start menu folders!"
+    Write-Output "No shortcut file '$shortcutName' found in start menu folders!"
     exit 1
 }
 else {
-    Write-Output "Startmenu Shortcut $shortcutName found..."
+    Write-Output "Startmenu Shortcut '$shortcutName' found..."
 }
 
 
@@ -42,11 +42,11 @@ $LNKfile = $LNKfiles | select -First 1
 $WScriptShell = New-Object -ComObject WScript.Shell
 $shortcutTarget = $WScriptShell.CreateShortcut($LNKfile.FullName).TargetPath
 if (-not (Test-Path $shortcutTarget)) {
-    Write-Host "Path $shortcutTarget is missing!"
+    Write-Host "Path '$shortcutTarget' is missing!"
     exit 1
 }
 else {
-    Write-Output "Executable $shortcutTarget found..."
+    Write-Output "Executable '$shortcutTarget' found..."
 }
 
 Write-Output "Everything seems fine."
