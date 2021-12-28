@@ -51,41 +51,15 @@ powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Uninstall
 ```
 
-
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-firefox.ps1](./detect-firefox.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\firefox\
-```
-
-File or Folder/Datei oder Ordner:
-
-```
-firefox.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-firefox.ps1](./detect-firefox.ps1)
-
-for install or upgrade outdated use:
-
-[detect-firefox-outdated.ps1](./detect-firefox-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
