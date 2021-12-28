@@ -43,51 +43,27 @@ https://www.blender.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender" -DesktopIcon "Blender"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender"
 ```
 
 
 ### Uninstall:
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender" -DesktopIcon "Blender" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender" -Uninstall
 ```
+
+
 
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-blender.ps1](./detect-blender.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\blender\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-blender.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (Warning: unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-blender.ps1](./detect-blender.ps1)
-
-for install or upgrade outdated use:
-
-[detect-blender-outdated.ps1](./detect-blender-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
