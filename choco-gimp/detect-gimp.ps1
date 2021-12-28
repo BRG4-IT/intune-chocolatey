@@ -1,9 +1,6 @@
 # checking for a successful choco gimp installation
 
 
-# checking for a successful choco LibreOffice installation
-
-
 ### check chocolatey
 
 $packageName = "gimp"
