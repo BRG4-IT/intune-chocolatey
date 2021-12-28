@@ -60,39 +60,13 @@ powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-vlc.ps1](./detect-vlc.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\vlc\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-vlc.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (Warining: unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-vlc.ps1](./detect-vlc.ps1)
-
-for install or upgrade outdated use:
-
-[detect-vlc-outdated.ps1](./detect-vlc-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
