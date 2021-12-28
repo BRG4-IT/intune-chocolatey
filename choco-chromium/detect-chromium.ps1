@@ -1,9 +1,11 @@
 # checking for a successful choco Chromium installation
 
+$packageName = "chromium"
+$shortcutNameRegExp = "^Chromium\.lnk$"
+
 
 ### check chocolatey
 
-$packageName = "chromium"
 $installedPackages = $(choco list --localonly --idonly).Split([Environment]::NewLine)
 if ($packageName -notin $installedPackages) {
     Write-Output "choco package '$packageName' not installed!"
@@ -16,7 +18,6 @@ else {
 
 ### check StartMenu entries
 
-$shortcutName = "Chromium.lnk"
 $LNKfiles = ""
 @(
     "$env:ProgramData\Microsoft\Windows\Start Menu\Programs",
@@ -24,15 +25,15 @@ $LNKfiles = ""
 ) | foreach {
     $startMenuLNKs = Get-ChildItem -path "$_\*" -recurse -Include *.lnk | Select Name,FullName | Sort Name -Descending # most recent program version on the top
     if (!$LNKfiles) {
-        $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -like $shortcutName}
+        $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match $shortcutNameRegExp}
     }
 }
 if (!$LNKfiles) {
-    Write-Output "No shortcut file '$shortcutName' found in start menu folders!"
+    Write-Output "No shortcut file '$shortcutNameRegExp' found in start menu folders!"
     exit 1
 }
 else {
-    Write-Output "Startmenu Shortcut '$shortcutName' found..."
+    Write-Output "Startmenu Shortcut '$($LNKfiles.Name)' ($shortcutNameRegExp) found..."
 }
 
 

@@ -138,13 +138,13 @@ elseif ($DesktopIcon) {
             $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -like "$Name.lnk"}
         }
         if (!$LNKfiles) {
-            $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "^$Name [0-9.]+.lnk$"}
+            $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "^$Name [0-9.]+\.lnk$"}
         }
         if (!$LNKfiles) {
             $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -like "$DesktopIcon.lnk"}
         }
         if (!$LNKfiles) {
-            $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "^$DesktopIcon [0-9.]+.lnk$"}
+            $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "^$DesktopIcon [0-9.]+\.lnk$"}
         }
     }
     if (!$LNKfiles) {
@@ -154,12 +154,15 @@ elseif ($DesktopIcon) {
         $LNKfile = $LNKfiles | select -First 1
         Write-Output "Best match: $($LNKfile.FullName)"
         if ($DesktopIconUnique) {
-            write-host "removing any existing desktop icons for the program"
-            $currentDesktopIcons = Get-ChildItem -path "$tagetPath\*.lnk" -Force | Select Name,FullName | Sort Name
-            $existingLNKfiles = $currentDesktopIcons | Where-Object {($_.Name -like "$Name.lnk") -or ($_.Name -match "^$Name [0-9.]+.lnk$") -or ($_.Name -like "$DesktopIcon") -or ($_.Name -match "^$DesktopIcon [0-9.]+.lnk$")}
-            $existingLNKfiles | foreach {
-                write-host "removing: $($_.Name)"
-                Remove-Item -Path $_.FullName
+            write-host "trying to find and remove any existing desktop icons for the program"
+            $desktopPaths = @($tagetPath, "$([Environment]::GetFolderPath("Desktop"))") | select -Unique
+            $desktopPaths | foreach {
+                $currentDesktopIcons = Get-ChildItem -path "$_\*.lnk" -Force | Select Name,FullName | Sort Name
+                $existingLNKfiles = $currentDesktopIcons | Where-Object {($_.Name -match "^$Name( [0-9.]+)?\.lnk$") -or ($_.Name -match "^$DesktopIcon( [0-9.]+)?\.lnk$")}
+                $existingLNKfiles | foreach {
+                    write-host "removing: $($_.Name) ($($_.FullName))"
+                    Remove-Item -Path $_.FullName
+                }
             }
         }
         $targetFullPath = "$tagetPath\$DesktopIcon.lnk"
