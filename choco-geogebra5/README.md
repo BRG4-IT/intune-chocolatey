@@ -43,52 +43,26 @@ https://geogebra.org/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra"
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra" -Uninstall
 ```
 
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: File/Datei
+Script file (Skriptdatei): [detect-geogebra.ps1](./detect-geogebra.ps1?raw=true)
 
-Path/Pfad:
+Run script as 32-bit process on 64-bit clients: __No__
 
-```
-%ChocolateyInstall%\lib\geogebra\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-geogebra.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (Warning: unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-geogebra.ps1](./detect-geogebra.ps1)
-
-for install or upgrade outdated use:
-
-[detect-geogebra-outdated.ps1](./detect-geogebra-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
