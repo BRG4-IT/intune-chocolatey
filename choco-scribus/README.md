@@ -43,14 +43,14 @@ https://www.scribus.net/
 ### Install:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "scribus"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "scribus" -DesktopIcon "Scribus" -DesktopIconUnique
 ```
 
 
 ### Uninstall:
 
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "scribus" -Uninstall
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "scribus" -DesktopIcon "Scribus" -Uninstall
 ```
 
 

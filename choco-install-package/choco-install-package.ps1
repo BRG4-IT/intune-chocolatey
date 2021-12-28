@@ -23,6 +23,9 @@
     # installing choco package "geogebra" andadds a desktop icon for the program with the name "GeoGebra GeoGebra 5.0.134.0"
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra" -AppendVersion -FullVersion
 
+    # installing choco package "scribus", adds a desktop icon for the program with the name "Scribus" and removes any other desktop icons for this program
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "scribus" -DesktopIcon "Scribus" -DesktopIconUnique
+
     # uninstalling PuTTY with chocolatey and removing all custom "PuTTY" desktop icons 
     # When using -DesktopIcon for creating custom icons, use this parameter also in the uninstall command!
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "putty.install" -DesktopIcon "PuTTY" -Uninstall
