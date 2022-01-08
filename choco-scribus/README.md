@@ -56,42 +56,16 @@ powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name
 
 ### Detection rules (Erkennungsregeln):
 
-Regelformat (Rule type): __Erkennungsregeln manuell konfigurieren__
+Rule format (Regelformat): __Use a custom detection script (Benutzerdefiniertes Skript für die Erkennung verwenden)__
 
-Rule type/Regel Typ: Registry Key/Registrirungschlüssel
+Script file (Skriptdatei): [detect-scribus.ps1](./detect-scribus.ps1?raw=true)
 
+Run script as 32-bit process on 64-bit clients: __No__
 
-Path/Pfad:
-
-```
-%ChocolateyInstall%\lib\scribus\
-```
-
-
-File or Folder/Datei oder Ordner:
-
-```
-scribus.nupkg
-```
-
-Detection method: File or folder exists
-
-
-OR/ODER (Warning: unsigned scripts prompt user!)
-
-Regelformat (Rule type): __Benutzerdefiniertes Skript für die Erkennung verwenden__
-
-Script:
-
-for install only use:
-
-[detect-scribus.ps1](./detect-scribus.ps1)
-
-
-for install or upgrade outdated use:
-
-[detect-scribus-outdated.ps1](./detect-scribus-outdated.ps1)
+Enforce script signature check: __No__
 
 ### Dependencies (Abhängigkeiten):
 
 chocolatey
+
+
