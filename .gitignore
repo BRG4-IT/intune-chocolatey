@@ -1,3 +1,4 @@
 *.URL
 *.cmd
 IntuneWinAppUtil.exe
+choco-install-package_icononly

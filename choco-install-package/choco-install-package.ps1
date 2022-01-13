@@ -61,9 +61,35 @@ param (
     [Parameter(Mandatory=$false)] # if set, tries do remove desktop icon for the program
     [switch]$AppendVersion = $false,
 
+    [Parameter(Mandatory=$false)] # if set, logs script parameters and script output to file
+    [switch]$Log = $false,
+
     [Parameter(Mandatory=$false)] # if set, the full version number is used for desktop icon name in combination with the -AppendVersion switch
     [switch]$FullVersion = $false
 )
+
+$IntuneLogPath = "$($env:ALLUSERSPROFILE)\Microsoft\IntuneManagementExtension\Logs"
+if ($Log) {
+    $ErrorActionPreference="SilentlyContinue"
+    Stop-Transcript | out-null
+    $ErrorActionPreference = "Continue"
+    $LogPath = "$($env:SystemDrive)"
+    if (Test-Path "$IntuneLogPath") {
+        $LogPath = $IntuneLogPath
+    }
+    Start-Transcript -path "$LogPath\choco-install-package-$Name-$(get-date -f yyyy-MM-dd-HHmmss).log" -append
+    if ([Environment]::Is64BitProcess) {
+        Write-Host "Script running as 64-bit process."
+    }
+    else {
+        Write-Host "Script running as 32-bit process."
+    }
+    Write-Host "Script parameters:"
+    foreach ($p in $PsBoundParameters.GetEnumerator()) {
+        Write-Host "$($p.Key) = $($p.Value)"
+    }
+    Write-Host "`n"
+}
 
 if (-not (Test-Path $env:ChocolateyInstall)) {
     Write-Host "Chocolatey not installed! Install manually or set chocolatey installation as dependency in intune"
@@ -74,6 +100,7 @@ if ($Name.Length -eq 0) {
     Write-Host "Missing Argument for parameter -Name (chocolatey package name)"
     exit 1
 }
+
 
 ### Program installation/uninstallation
 
@@ -104,6 +131,8 @@ else {
 
 ### create/remove Desktop icon
 
+### determine context
+
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     write-host "SYSTEM context (Shortcut applies for all users)"
@@ -113,6 +142,9 @@ else {
     write-host "USER context (Shortcut only applies for the logged on user)"
     $tagetPath = "$([Environment]::GetFolderPath("Desktop"))"
 }
+
+
+### shortcut(s)
 
 if ($Uninstall -or $RemoveDesktopIcon) {
     if ([string]::IsNullOrEmpty($DesktopIcon)) {
@@ -127,13 +159,19 @@ if ($Uninstall -or $RemoveDesktopIcon) {
 }
 elseif ($DesktopIcon) {
     Write-Host "Trying to create a Desktop Link"
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    $prgExePath = ""
+    $prgVersion = ""
+
+    ### 1. find program info
+
     $LNKfiles = ""
     # first try to find a LNK file in the start menu directories
     @(
         "$env:ProgramData\Microsoft\Windows\Start Menu\Programs",
         "$env:AppData\Microsoft\Windows\Start Menu\Programs"
     ) | foreach {
-        $startMenuLNKs = Get-ChildItem -path "$_\*" -recurse -Include *.lnk | Select Name,FullName | Sort Name -Descending # most recent program version on the top
+        $startMenuLNKs = Get-ChildItem -path "$_\*" -recurse -Include *.lnk | Select Name,FullName | Sort CreationTime -Descending # most recent program version on the top
         if (!$LNKfiles) {
             $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -like "$Name.lnk"}
         }
@@ -147,12 +185,28 @@ elseif ($DesktopIcon) {
             $LNKfiles = $startMenuLNKs | Where-Object {$_.Name -match "^$DesktopIcon [0-9.]+\.lnk$"}
         }
     }
-    if (!$LNKfiles) {
-        Write-Output "Sorry, no matching Sortcut (.lnk) file found in start menu folders..."
+    if ($LNKfiles) {
+        $LNKfile = $LNKfiles | select -First 1
+        $prgExePath = $WScriptShell.CreateShortcut($($LNKfile.FullName)).TargetPath
+        $prgVersion = (Get-Item $prgExePath).VersionInfo.ProductVersion
+        Write-Output "Best match: $($LNKfile.FullName) ($prgExePath, Version: $prgVersion)"
     }
     else {
-        $LNKfile = $LNKfiles | select -First 1
-        Write-Output "Best match: $($LNKfile.FullName)"
+        Write-Output "no matching Sortcut (.lnk) file found in start menu folders..."
+        $latestExe = Get-ChildItem -path "${env:ProgramW6432}\*","${env:ProgramFiles(x86)}\*" -recurse -Include "$DesktopIcon*.exe","$Name*.exe" -ErrorAction Ignore | Sort CreationTime -Descending | select * -First 1        
+        if (!$latestExe) {
+            Write-Output "no matching executable (.exe) file found in program files folders..."
+        }
+        else {
+            $prgExePath = $latestExe.FullName
+            $prgVersion = $latestExe.VersionInfo.ProductVersion
+            Write-Output "matching executable (.exe) file found ($prgExePath, Version: $prgVersion)..."
+        }
+    }
+
+    ### 2. create shortcut
+
+    if (-not [string]::IsNullOrEmpty($prgExePath) ) {
         if ($DesktopIconUnique) {
             write-host "trying to find and remove any existing desktop icons for the program"
             $desktopPaths = @($tagetPath, "$([Environment]::GetFolderPath("Desktop"))") | select -Unique
@@ -165,21 +219,25 @@ elseif ($DesktopIcon) {
                 }
             }
         }
-        $targetFullPath = "$tagetPath\$DesktopIcon.lnk"
-        if ($AppendVersion) {
-            $InstalledPackages = choco list --localonly
-            $packageInfo = $InstalledPackages.Split([Environment]::NewLine) | where {$_ -match "^$Name [0-9.]+$"} | Select -First 1
-            if ($packageInfo) {
-                $vnumbers = ($packageInfo -replace "$Name ","").Split(".")
-                if (!$FullVersion) {
-                    $vnumbers = $vnumbers[0..1]
-                }
-                $versionString = $vnumbers -join "."
-                Write-Host "found $Name version $versionString"
-                $targetFullPath = "$tagetPath\$DesktopIcon $versionString.lnk"
-            }            
+
+        if (-not $AppendVersion) {
+            $targetFullPath = "$tagetPath\$DesktopIcon.lnk"
         }
+        else {
+            $versionString = $prgVersion -replace ",","." # some prgs like Audacity use "," as version seperator... 
+            if (!$FullVersion) {
+                $versionString = $versionString.Split(".")[0..1] -join(".")
+            }
+            $targetFullPath = "$tagetPath\$DesktopIcon $versionString.lnk"
+        }
+
         Write-Host "Creating Desktop Link $targetFullPath"
-        Copy-Item -Path $LNKfile.FullName -Destination "$targetFullPath" -Force
+        $Shortcut = $WScriptShell.CreateShortcut($targetFullPath)
+        $Shortcut.TargetPath = "$prgExePath"
+        $Shortcut.Save()
     }
+}
+
+if ($Log) {
+    Stop-Transcript
 }
