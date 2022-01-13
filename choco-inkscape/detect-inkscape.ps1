@@ -16,14 +16,16 @@ else {
 
 ### check executable path
 
-If (-Not (Test-Path -Path "$env:PROGRAMFILES\Inkscape\bin\inkscape.exe")) {
-    Write-Host "Executable missing"
-    exit 1
+$results = Get-ChildItem -path "${env:ProgramW6432}\*","${env:ProgramFiles(x86)}\*" -recurse -Include "inkscape.exe" -ErrorAction Ignore  | select * -First 1 
+If ($results) {
+    Write-Output "Executable found ($($results.FullName))..."
 }
 else {
-    Write-Output "Executable found..."
+    Write-Host "Executable missing"
+    exit 1
 }
 
 
 Write-Output "Everything seems fine."
 exit 0
+
