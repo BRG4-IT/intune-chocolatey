@@ -29,13 +29,13 @@ Danach kopiere die Befehlszeile auf der Seite [https://chocolatey.org/install](h
 
 Ist nur die Intune-Installation/Deinstallation einzelner Chocolatey Programm-Pakets gescheitert, können diese über eine  _Powershell Konsole mit Administrativen Rechten_ öffnen (Tastenkombination `WIN+X` dann `Windows PowerShell (Admin)` auswählen) am lokalen Computer installiert/deinstalliert werden.
 
-Um die PowerShell Datei für die Installation/Deinstallation aus dem Internet herunterzuladen und im Ordner `%ChocolateyInstall%\intune` zu speichern, die folgende Zeile kopieren, in das Konsolenfenster einfügen und ausführen. 
+Kopiere die folgende Befehlszeile in die Console und führe die Befehle aus (Eingabetaste drücken) um die PowerShell Skripte für die Installation/Deinstallation aus dem Internet herunterzuladen:
 
 ```
 $chocoIntunePath="$Env:ChocolateyInstall\intune";if (!(Test-Path $chocoIntunePath)) {New-Item -ItemType directory -Path $chocoIntunePath};cd $chocoIntunePath;wget "https://github.com/BRG4-IT/intune-chocolatey/blob/main/choco-install-package/choco-install-package.ps1?raw=true" -OutFile "choco-install-package.ps1"
 ```
 
-Um einzelene Programme zu installieren oder zu deinstallieren, können jetzt die Befehlszeilen die unter den Überschriften Install/Uninstall auf den [README-Seiten der einzelnen Programme](https://github.com/BRG4-IT/intune-chocolatey#step-2-deploy-chocolatey-packages-with-intune) dokumentiert sind, verwendet werden.
+Um einzelene Programme zu installieren oder zu deinstallieren, verwende die Befehlszeilen die unter den Überschriften Install/Uninstall auf den [README-Seiten der einzelnen Programme](https://github.com/BRG4-IT/intune-chocolatey#step-2-deploy-chocolatey-packages-with-intune) dokumentiert sind.
 
     
 ## Logfiles einsehen

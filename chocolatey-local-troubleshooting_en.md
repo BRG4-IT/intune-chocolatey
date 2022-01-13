@@ -29,13 +29,13 @@ Then copy the command line found at [https://chocolatey.org/install](https://cho
 
 If only the Intune installation/uninstallation of a single Chocolatey program package failed, this can be installed via a _Powershell console with administrative rights_ open (key combination `WIN+X` then select __Windows PowerShell (Admin)__).
 
-To download the PowerShell file for installation/uninstallation from the Internet and save it in the folder `%ChocolateyInstall%\intune`, copy the following line, paste it into the console window and run it. 
+Copy the following command line to the Console and execute the commands (press Enter) to download the PowerShell scripts for installation/uninstallation from the Internet:
 
 ```
 $chocoIntunePath="$Env:ChocolateyInstall\intune";if (!(Test-Path $chocoIntunePath)) {New-Item -ItemType directory -Path $chocoIntunePath};cd $chocoIntunePath;wget "https://github.com/BRG4-IT/intune-chocolatey/blob/main/choco-install-package/choco-install-package.ps1?raw=true" -OutFile "choco-install-package.ps1"
 ```
 
-To install/uninstall individual programs, you can now use the command lines documented under the Install/Uninstall headings on the [README pages of the individual programs](https://github.com/BRG4-IT/intune-chocolatey#step-2-deploy-chocolatey-packages-with-intune).
+To install or uninstall individual programs, use the command lines documented under the Install/Uninstall headings on the [README pages of each program](https://github.com/BRG4-IT/intune-chocolatey#step-2-deploy-chocolatey-packages-with-intune).
     
 
 ## View log files
