@@ -6,6 +6,9 @@
     # installing firefox with chocolatey (for package name see https://community.chocolatey.org/packages)
     powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox"
     
+    # installing firefox with chocolatey and log script output to `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-firefox-yyyy-MM-dd-HHmmss.log
+    powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox" -Log
+
     # installing firefox with parameters (Note: all valid parameters for a choco package can be listed by running
     # choco info <packagename>
     # on your locla computer)
