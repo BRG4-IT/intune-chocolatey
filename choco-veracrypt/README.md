@@ -48,6 +48,7 @@ http://www.veracrypt.fr/en/Home.html
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "veracrypt"
 ```
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-veracrypt-yyyy-MM-dd-HHmmss.log`.
 
 ### Uninstall:
 ```

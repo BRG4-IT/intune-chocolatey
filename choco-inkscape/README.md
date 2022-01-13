@@ -46,6 +46,8 @@ https://inkscape.org/
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "inkscape" -DesktopIcon "InkScape"
 ```
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-inkscape-yyyy-MM-dd-HHmmss.log`.
+
 
 ### Uninstall:
 

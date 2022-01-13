@@ -45,6 +45,8 @@ https://www.mozilla.org/de/firefox/
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "firefox"
 ```
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-firefox-yyyy-MM-dd-HHmmss.log`.
+
 
 ### Uninstall:
 ```

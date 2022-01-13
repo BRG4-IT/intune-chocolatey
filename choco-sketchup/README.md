@@ -46,6 +46,7 @@ https://www.sketchup.com/
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "sketchup"
 ```
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-sketchup-yyyy-MM-dd-HHmmss.log`.
 
 ### Uninstall:
 ```

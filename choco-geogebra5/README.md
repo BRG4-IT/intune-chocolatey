@@ -46,6 +46,8 @@ https://geogebra.org/
 powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "geogebra" -DesktopIcon "GeoGebra"
 ```
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-geogebra-yyyy-MM-dd-HHmmss.log`.
+
 
 ### Uninstall:
 

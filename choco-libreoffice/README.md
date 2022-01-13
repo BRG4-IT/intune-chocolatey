@@ -47,6 +47,9 @@ powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name
 ```
 __Note: We remove the general LibreOffice X.X icon from the desktop, but add desktop icons for _Writer, Calc_ and _Impress._ See [https://github.com/BRG4-IT/StartMenu-to-Desktop](https://github.com/BRG4-IT/StartMenu-to-Desktop) for more information. If you want to keep the _LibreOffice_ icon, just remove the `-RemoveDesktopIcon` option from the command line above.__
 
+Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-inkscape-yyyy-MM-dd-HHmmss.log`.
+
+
 ### Uninstall:
 
 ```
