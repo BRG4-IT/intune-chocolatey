@@ -43,7 +43,7 @@ https://www.blender.org/
 
 ### Install:
 ```
-powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender"
+powershell.exe -executionpolicy bypass -file ".\choco-install-package.ps1" -Name "blender" -DesktopIcon "Blender" -DesktopIconUnique
 ```
 
 Note: You may also want to use the `-Log` switch. If provided the install process is logged to a file `%ALLUSERSPROFILE%\Microsoft\IntuneManagementExtension\logs\choco-install-package-blender-yyyy-MM-dd-HHmmss.log`.
